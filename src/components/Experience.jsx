@@ -12,7 +12,7 @@ export default function Experience() {
         <div className="section-header">
           <span className="section-tag">Work History</span>
           <h2 className="section-title">Professional Experience</h2>
-          <p className="section-subtitle">11+ years of enterprise web development across leading technology firms</p>
+          <p className="section-subtitle">12+ years of enterprise web development across leading technology firms</p>
         </div>
 
         <div className="exp__layout">

@@ -1,14 +1,14 @@
 export const personalInfo = {
   name: 'Prakash Balasubramanian',
-  title: 'Senior Software Engineer & Technology Lead',
-  subtitle: 'Frontend Specialist | Angular | React | 11+ Years Experience',
-  email: 'prakash.balasubramanian@cognizant.com',
+  title: 'Senior Software Engineer | Technology Lead',
+  subtitle: 'Frontend Specialist | Angular | React | 12+ Years Experience',
+  email: 'prakash.engg89@gmail.com',
   phone: '+91 9944363757',
   location: 'Chennai, India',
-  linkedin: 'https://linkedin.com',
-  github: 'https://github.com',
+  linkedin: 'https://www.linkedin.com/in/prakash-b-941885341/',
+  github: 'https://github.com/Prakash-Balu',
   summary:
-    'Experienced Senior Software Engineer with 11+ years in enterprise web development, skilled at steering technology initiatives, fostering teamwork, and driving professional growth. Seeking a Technology Lead position. Proficient in Angular, HTML, CSS, JavaScript, and Bootstrap. Collaborative and proactive team player focused on shared goals and continuous growth.',
+    'Experienced Senior Software Engineer with 12+ years in enterprise web development, skilled at steering technology initiatives, fostering teamwork, and driving professional growth. Seeking a Technology Lead position. Proficient in Angular, HTML, CSS, JavaScript, and Bootstrap. Collaborative and proactive team player focused on shared goals and continuous growth.',
 };
 
 export const skills = {
@@ -17,12 +17,12 @@ export const skills = {
   database: ['MySQL'],
   tools: ['JIRA', 'Git', 'SVN', 'Mantis', 'RQM'],
   os: ['Windows', 'Linux'],
-  aiTools: ['Microsoft Copilot', 'GitHub Copilot', 'ChatGPT', 'Claude AI'],
+  aiTools: ['Microsoft Copilot', 'GitHub Copilot', 'Claude AI'],
 };
 
 export const experience = [
   {
-    role: 'Senior Software Engineer (Technology Lead)',
+    role: 'Senior Software Engineer B2 (Technology Lead)',
     company: 'Cognizant Technology Solutions',
     location: 'Chennai, India',
     period: 'May 2025 – Jan 2026',
@@ -44,7 +44,7 @@ export const experience = [
     role: 'Technology Lead',
     company: 'Infosys Limited',
     location: 'Chennai, India',
-    period: 'Apr 2022 – Present',
+    period: 'Apr 2022 – Apr 2025',
     project: null,
     description:
       'Led frontend development teams and technology initiatives for enterprise web applications.',
@@ -158,19 +158,19 @@ export const projects = [
 export const education = [
   {
     degree: "Bachelor of Engineering (Information Technology)",
-    institution: 'Annamalai University',
+    institution: 'Annamalai University, Chidambaram',
     period: '2006 – 2010',
     grade: null,
   },
   {
     degree: 'Higher Secondary School (HSC)',
-    institution: 'Sri Ramakrishna Vidyasala',
+    institution: 'Sri Ramakrishna Vidyasala Higher Secondary School, Chidambaram',
     period: '2004 – 2006',
     grade: null,
   },
   {
     degree: 'Secondary School (SSLC)',
-    institution: 'Sri Ramakrishna Vidyasala',
+    institution: 'Sri Ramakrishna Vidyasala Higher Secondary School, Chidambaram',
     period: '2003 – 2004',
     grade: null,
   },

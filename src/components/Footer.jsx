@@ -11,7 +11,7 @@ export default function Footer() {
           <span className="footer__name">{personalInfo.name}</span>
         </div>
         <p className="footer__copy">
-          © {new Date().getFullYear()} {personalInfo.name}. Senior Software Engineer & Technology Lead.
+          © {new Date().getFullYear()} {personalInfo.name}. {personalInfo.title}.
         </p>
         <div className="footer__links">
           {['#about', '#skills', '#experience', '#projects', '#contact'].map((href) => (

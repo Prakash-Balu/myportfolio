@@ -8,20 +8,20 @@ export default function About() {
         <div className="section-header">
           <span className="section-tag">About Me</span>
           <h2 className="section-title">Who I Am</h2>
-          <p className="section-subtitle">A passionate frontend engineer with 11+ years of enterprise experience</p>
+          <p className="section-subtitle">A passionate frontend engineer with 12+ years of enterprise experience</p>
         </div>
 
         <div className="about__grid">
           <div className="about__text">
             <p className="about__intro">
               I'm <strong>Prakash Balasubramanian</strong>, a Senior Software Engineer and Technology Lead based in{' '}
-              <strong>Chennai, India</strong>. With over 11 years of experience in enterprise web development, I
+              <strong>Chennai, India</strong>. With over 12 years of experience in enterprise web development, I
               specialise in Angular-based frontend architecture and scalable web applications.
             </p>
             <p className="about__body">
               Currently at <strong>Cognizant Technology Solutions</strong>, I've led frontend delivery for
               Telstra Health — a critical healthcare platform serving Australia's healthcare system using the global
-              FHIR standard. I bring deep expertise in Angular across versions 8 through 14, combined with a strong
+              FHIR standard. I bring deep expertise in Angular across versions 8 through 19, combined with a strong
               understanding of Agile methodologies and SDLC best practices.
             </p>
             <p className="about__body">
@@ -48,7 +48,7 @@ export default function About() {
               </div>
               <div className="about__info-item">
                 <span className="about__info-label">Availability</span>
-                <span className="about__info-value about__info-available">Open to opportunities</span>
+                <span className="about__info-value about__info-available">Not Available</span>
               </div>
             </div>
           </div>
