@@ -14,7 +14,7 @@ export const personalInfo = {
 export const skills = {
   primary: ['AngularJS', 'Angular 8', 'Angular 11', 'Angular 14', 'Angular 19', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
   secondary: ['React', 'Node.js', 'jQuery', 'AJAX', 'TypeScript'],
-  database: ['MySQL'],
+  database: ['MySQL', 'MongoDB'],
   tools: ['JIRA', 'Git', 'SVN', 'Mantis', 'RQM'],
   os: ['Windows', 'Linux'],
   aiTools: ['Microsoft Copilot', 'GitHub Copilot', 'Claude AI'],
@@ -25,20 +25,23 @@ export const experience = [
     role: 'Senior Software Engineer B2 (Technology Lead)',
     company: 'Cognizant Technology Solutions',
     location: 'Chennai, India',
-    period: 'May 2025 – Jan 2026',
-    project: 'Telstra Health',
+    period: 'May 2025 – Present',
+    project: null,
     description:
-      'Worked on Telstra Health — a major initiative to enhance the healthcare system in Australia. Redesigned the data architecture of My Health Record using the global FHIR standard for improved data interoperability. Connected care providers across hospital, health service, general practice, pharmacy, and aged care sectors.',
+      'Senior Angular Tech Lead driving scalable frontend solutions, enforcing UI/UX standards, optimising performance, ensuring compliance, and mentoring teams while partnering with product and QA stakeholders.',
     responsibilities: [
-      'Analysed user stories, functional specs and acceptance criteria for Clinical Manager modules (Care Statement, Allied Health, Medications, eNRMC)',
-      'Designed, developed and enhanced application features ensuring adherence to clinical workflows and regulatory standards',
-      'Delivered UI/UX consistency improvements across modules for seamless user experience',
-      'Conducted detailed root cause analysis for complex defects across application layers',
-      'Collaborated with Product Owners, QA, Support, Solution Architects, and DevOps for smooth SDLC delivery',
-      'Created and maintained technical documentation (LLD) for developed modules',
-      'Managed delivery across multiple parallel workstreams ensuring timelines and quality benchmarks',
+      'Lead analysis of user stories, functional specifications, and acceptance criteria, ensuring accurate interpretation of project workflows and regulatory requirements.',
+      'Architect and design scalable, maintainable Angular solutions aligned with enterprise front‑end standards and project compliance guidelines.',
+      'Drive development, enhancement, and refactoring of core modules to improve application stability, performance, and long‑term maintainability.',
+      'Establish and enforce UI/UX design consistency across modules, leveraging shared component libraries, Angular best practices, and design standards.',
+      'Lead the implementation of compliance-driven updates in alignment with project regulations, safety standards, and organisational policies.',
+      'Identify frontend performance bottlenecks and implement optimisations such as lazy loading, change detection strategies, bundle optimisation, and efficient state management.',
+      'Provide technical leadership through code reviews, architecture guidance, and mentoring of junior and mid-level developers.',
+      'Collaborate with backend teams, architects, SMEs, and product owners to ensure seamless integration and end‑to‑end solution quality.',
+      'Champion clean code principles, secure coding practices, accessibility standards, and frontend testing strategies.',
+      'Support continuous improvement initiatives by evaluating new Angular features, tooling, and frameworks relevant to large-scale applications.'
     ],
-    tech: ['AngularJS', 'Angular 14', 'HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+    tech: ['AngularJS', 'Angular 14', 'Angular 19', 'HTML', 'CSS', 'JavaScript', 'Bootstrap'],
   },
   {
     role: 'Technology Lead',
@@ -54,7 +57,7 @@ export const experience = [
       'Mentored junior developers and conducted code reviews',
       'Coordinated with cross-functional teams to deliver projects on time',
     ],
-    tech: ['Angular', 'HTML5', 'CSS3', 'JavaScript', 'Node.js'],
+    tech: ['Angular 11', 'Angular 14', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'Node.js'],
   },
   {
     role: 'Technology Analyst',
@@ -70,7 +73,7 @@ export const experience = [
       'Implemented RESTful API integrations',
       'Collaborated with UI/UX designers to implement pixel-perfect interfaces',
     ],
-    tech: ['Angular', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
+    tech: ['Angular 8', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
   },
   {
     role: 'Senior Systems Engineer',
@@ -85,7 +88,7 @@ export const experience = [
       'Participated in Agile ceremonies including sprint planning and retrospectives',
       'Wrote unit tests and ensured code coverage',
     ],
-    tech: ['AngularJS', 'HTML5', 'CSS3', 'JavaScript'],
+    tech: ['AngularJS', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
   },
   {
     role: 'Software Engineer',
@@ -100,7 +103,7 @@ export const experience = [
       'Built dynamic UI components and handled client-side logic',
       'Collaborated with backend teams for API integration',
     ],
-    tech: ['HTML', 'CSS', 'JavaScript', 'jQuery'],
+    tech: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'BootStrap', 'PHP', 'AngularJS'],
   },
 ];
 
@@ -110,6 +113,38 @@ export const projects = [
     description:
       'Healthcare platform for Australian care providers. Redesigned the data architecture of My Health Record using the FHIR standard for improved data interoperability across hospitals, pharmacies, and aged care sectors.',
     tech: ['Angular 14', 'AngularJS', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
+    type: 'Enterprise',
+    highlight: true,
+  },
+  {
+    name: "Veera's Education",
+    description:
+      'It is to empower every individual and community to achieve their full potential. We believe that everyone deserves equal access to quality education, skill development, and personal growth opportunities.',
+    tech: ['Angular 19', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
+    type: 'Website',
+    highlight: false,
+  },
+  {
+    name: 'Leave Management System',
+    description:
+      'Developed an enterprise Leave Management System enabling automated leave workflows, policy enforcement, and role‑based access with a focus on performance, usability, and scalable frontend architecture.',
+    tech: ['Angular 14', 'HTML5', 'CSS3', 'JavaScript', 'Node.js', 'MongoDB'],
+    type: 'Enterprise',
+    highlight: false,
+  },
+  {
+    name: 'Goods and Services Tax (GST) Development',
+    description:
+      'Developed an enterprise GST system automating tax calculation, ITC management, and statutory reporting with a focus on compliance, performance, and scalable application design.',
+    tech: ['Angular 11', 'Angular 8', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
+    type: 'Enterprise',
+    highlight: true,
+  },
+  {
+    name: 'iBrewApp',
+    description:
+      'iBrewApp is a cloud‑based product platform designed to simplify the creation, configuration, and deployment of enterprise and multi‑app environments. The platform enables organisations and developers to efficiently manage application lifecycles—from corporate setup and app creation to build deployment and activation—through unified web portals.',
+    tech: ['AngularJS', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'PHP', 'MySQL'],
     type: 'Enterprise',
     highlight: true,
   },
