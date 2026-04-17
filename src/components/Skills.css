@@ -1,0 +1,111 @@
+.skills__proficiency {
+  margin-bottom: 3rem;
+}
+
+.skills__sub-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.skills__bars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 3rem;
+}
+
+.skills__bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.skills__bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.skills__bar-pct {
+  color: var(--accent-light);
+  font-weight: 600;
+}
+
+.skills__bar-track {
+  height: 6px;
+  background: var(--border);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.skills__bar-fill {
+  height: 100%;
+  width: var(--w);
+  background: var(--gradient);
+  border-radius: 100px;
+  animation: barGrow 1s ease both;
+  transform-origin: left;
+}
+
+@keyframes barGrow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.skills__categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.skills__cat {
+  padding: 1.5rem;
+}
+
+.skills__cat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.skills__cat-icon {
+  font-size: 1.25rem;
+}
+
+.skills__cat-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.skills__cat-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skills__tag {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  background: color-mix(in srgb, var(--color) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color) 30%, transparent);
+  color: color-mix(in srgb, var(--color) 80%, #e2e8f0);
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+
+.skills__tag:hover {
+  background: color-mix(in srgb, var(--color) 20%, transparent);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .skills__bars { grid-template-columns: 1fr; }
+}
