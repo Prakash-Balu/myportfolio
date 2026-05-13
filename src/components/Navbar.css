@@ -98,6 +98,43 @@
   transition: all 0.3s ease;
 }
 
+/* Mobile overlay — rendered as a portal on document.body to avoid
+   backdrop-filter containment bug in Chromium (fixed children get clipped
+   to the nav element when the parent has backdrop-filter). */
+.navbar__mobile-overlay {
+  display: none;
+}
+
+.navbar__mobile-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar__mobile-link {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.4rem;
+  transition: all 0.2s;
+}
+
+.navbar__mobile-link:hover,
+.navbar__mobile-link--active {
+  color: var(--text);
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.navbar__mobile-cta {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  padding: 0.65rem 2rem;
+}
+
 @media (max-width: 768px) {
   .navbar__hamburger {
     display: flex;
@@ -117,38 +154,28 @@
     transform: translateY(-7px) rotate(-45deg);
   }
 
+  /* Hide desktop links on mobile */
   .navbar__links {
+    display: none;
+  }
+
+  /* Show portal overlay on mobile */
+  .navbar__mobile-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     z-index: 1000;
     background: rgba(15, 23, 42, 0.98);
     backdrop-filter: blur(16px);
-    flex-direction: column;
-    justify-content: center;
+    display: flex;
     align-items: center;
-    gap: 1.5rem;
+    justify-content: center;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
   }
 
-  .navbar__links--open {
+  .navbar__mobile-overlay--open {
     opacity: 1;
     pointer-events: all;
-  }
-
-  .navbar__link {
-    font-size: 1.35rem;
-    padding: 0.6rem 1.5rem;
-  }
-
-  .navbar__cta {
-    margin-left: 0;
-    margin-top: 0.5rem;
-    font-size: 1rem;
-    padding: 0.65rem 2rem;
   }
 }

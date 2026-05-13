@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import './Navbar.css';
 
 const navLinks = [
@@ -16,9 +17,7 @@ export default function Navbar() {
   const [active, setActive] = useState('');
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -34,43 +33,71 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
-      <div className="navbar__inner">
-        <a href="#hero" className="navbar__logo" onClick={() => setActive('')}>
-          <span className="navbar__logo-icon">PB</span>
-          <span className="navbar__logo-text">Prakash B</span>
-        </a>
+    <>
+      <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+        <div className="navbar__inner">
+          <a href="#hero" className="navbar__logo" onClick={() => setActive('')}>
+            <span className="navbar__logo-icon">PB</span>
+            <span className="navbar__logo-text">Prakash B</span>
+          </a>
 
-        <ul className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className={`navbar__link ${active === link.href ? 'navbar__link--active' : ''}`}
-                onClick={() => handleNav(link.href)}
-              >
-                {link.label}
+          {/* Desktop links */}
+          <ul className="navbar__links">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className={`navbar__link ${active === link.href ? 'navbar__link--active' : ''}`}
+                  onClick={() => handleNav(link.href)}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a href="#contact" className="btn btn-primary navbar__cta" onClick={() => handleNav('#contact')}>
+                Hire Me
               </a>
             </li>
-          ))}
-          <li>
-            <a href="#contact" className="btn btn-primary navbar__cta" onClick={() => handleNav('#contact')}>
-              Hire Me
-            </a>
-          </li>
-        </ul>
+          </ul>
 
-        <button
-          className={`navbar__hamburger ${menuOpen ? 'is-open' : ''}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-          aria-expanded={menuOpen}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </nav>
+          <button
+            className={`navbar__hamburger ${menuOpen ? 'is-open' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile overlay rendered as portal so backdrop-filter on <nav> doesn't clip it */}
+      {createPortal(
+        <div className={`navbar__mobile-overlay ${menuOpen ? 'navbar__mobile-overlay--open' : ''}`}>
+          <ul className="navbar__mobile-links">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className={`navbar__mobile-link ${active === link.href ? 'navbar__mobile-link--active' : ''}`}
+                  onClick={() => handleNav(link.href)}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a href="#contact" className="btn btn-primary navbar__mobile-cta" onClick={() => handleNav('#contact')}>
+                Hire Me
+              </a>
+            </li>
+          </ul>
+        </div>,
+        document.body
+      )}
+    </>
   );
 }
