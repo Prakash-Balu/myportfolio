@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1001; /* must be above the mobile portal overlay (z-index: 1000) */
   padding: 1.25rem 1.5rem;
   transition: all 0.3s ease;
 }
@@ -138,8 +138,6 @@
 @media (max-width: 768px) {
   .navbar__hamburger {
     display: flex;
-    z-index: 1001;
-    position: relative;
   }
 
   /* Animate hamburger → X when menu is open */
