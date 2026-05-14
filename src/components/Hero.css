@@ -245,5 +245,6 @@
   .hero__stats { gap: 1rem; }
   .hero__stat-number { font-size: 1.6rem; }
   .hero__scroll { display: none; }
-  .hero__summary { font-size: 0.95rem; }
+  .hero__summary { font-size: 0.95rem; max-width: 660px; }
+  .hero__name-accent { max-width: 660px;}
 }
