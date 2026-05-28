@@ -283,9 +283,16 @@
 }
 
 @media (max-width: 480px) {
+  .hero,
   .hero__content {
     max-width: 100%;
     width: 100%;
+    overflow-x: hidden;
+  }
+
+  .hero {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .hero__name {
@@ -298,8 +305,17 @@
   }
 
   .hero__summary {
+    width: 100%;
+    max-width: 100%;
+    margin: 2rem 0 0 0;
+    padding: 0;
     font-size: 0.95rem;
-    line-height: 1.7;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
   }
 }
 
