@@ -5,20 +5,22 @@ export const statsInfo = {
 }
 
 export const statsLabels = {
-  expLabel : ''
+  expLabel : 'Years Experience',
+  projectDelLabel: 'Projects Delivered',
+  companyLabel: 'Companies'
 }
 
 export const personalInfo = {
   name: 'Prakash Balasubramanian',
   title: 'Senior Software Engineer | Technology Lead',
-  subtitle: `Frontend Specialist | Angular | React | ${statsInfo.yearsofExp} Years Experience`,
+  subtitle: `Frontend Specialist | Angular | React | ${statsInfo.yearsofExp} ${statsLabels.expLabel}`,
   email: 'prakash.engg89@gmail.com',
   phone: '+91 9944363757',
   location: 'Chennai, India',
   linkedin: 'https://www.linkedin.com/in/prakash-b-941885341/',
   github: 'https://github.com/Prakash-Balu',
   summary:
-    'Experienced Senior Software Engineer with 12+ years in enterprise web development, skilled at steering technology initiatives, fostering teamwork, and driving professional growth. Seeking a Technology Lead position. Proficient in Angular, HTML, CSS, JavaScript, and Bootstrap. Collaborative and proactive team player focused on shared goals and continuous growth.',
+    `Experienced Senior Software Engineer with ${statsInfo.yearsofExp} years in enterprise web development, skilled at steering technology initiatives, fostering teamwork, and driving professional growth. Seeking a Technology Lead position. Proficient in Angular, HTML, CSS, JavaScript, and Bootstrap. Collaborative and proactive team player focused on shared goals and continuous growth.`,
 };
 
 export const skills = {

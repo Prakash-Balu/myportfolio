@@ -1,4 +1,4 @@
-import { personalInfo, statsInfo } from '../data/portfolioData';
+import { personalInfo, statsInfo, statsLabels } from '../data/portfolioData';
 import './Hero.css';
 
 export default function Hero() {
@@ -29,17 +29,17 @@ export default function Hero() {
         <div className="hero__stats">
           <div className="hero__stat">
             <span className="hero__stat-number">{statsInfo.yearsofExp}</span>
-            <span className="hero__stat-label">Years Experience</span>
+            <span className="hero__stat-label">{statsLabels.expLabel}</span>
           </div>
           <div className="hero__stat-divider"></div>
           <div className="hero__stat">
             <span className="hero__stat-number">{statsInfo.projectCounts}</span>
-            <span className="hero__stat-label">Projects Delivered</span>
+            <span className="hero__stat-label">{statsLabels.projectDelLabel}</span>
           </div>
           <div className="hero__stat-divider"></div>
           <div className="hero__stat">
             <span className="hero__stat-number">{statsInfo.companiesCount}</span>
-            <span className="hero__stat-label">Companies</span>
+            <span className="hero__stat-label">{statsLabels.companyLabel}</span>
           </div>
         </div>
 
