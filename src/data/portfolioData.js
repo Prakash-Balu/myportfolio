@@ -1,7 +1,17 @@
+export const statsInfo = {
+  yearsofExp: '12+',
+  projectCounts: '10+',
+  companiesCount: 3
+}
+
+export const statsLabels = {
+  expLabel : ''
+}
+
 export const personalInfo = {
   name: 'Prakash Balasubramanian',
   title: 'Senior Software Engineer | Technology Lead',
-  subtitle: 'Frontend Specialist | Angular | React | 12+ Years Experience',
+  subtitle: `Frontend Specialist | Angular | React | ${statsInfo.yearsofExp} Years Experience`,
   email: 'prakash.engg89@gmail.com',
   phone: '+91 9944363757',
   location: 'Chennai, India',

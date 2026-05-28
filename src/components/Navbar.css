@@ -1,4 +1,4 @@
-.navbar {
+﻿.navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,9 +9,9 @@
 }
 
 .navbar--scrolled {
-  background: rgba(15, 23, 42, 0.92);
+  background: rgba(9, 9, 11, 0.92);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+  border-bottom: 1px solid rgba(59, 7, 100, 0.35);
   padding: 0.85rem 1.5rem;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
@@ -70,7 +70,7 @@
 .navbar__link:hover,
 .navbar__link--active {
   color: var(--text);
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(147, 51, 234, 0.1);
 }
 
 .navbar__cta {
@@ -126,7 +126,7 @@
 .navbar__mobile-link:hover,
 .navbar__mobile-link--active {
   color: var(--text);
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(147, 51, 234, 0.1);
 }
 
 .navbar__mobile-cta {
@@ -162,7 +162,7 @@
     position: fixed;
     inset: 0;
     z-index: 1000;
-    background: rgba(15, 23, 42, 0.98);
+    background: rgba(9, 9, 11, 0.98);
     backdrop-filter: blur(16px);
     display: flex;
     align-items: center;

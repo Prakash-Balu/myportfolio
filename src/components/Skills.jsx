@@ -6,13 +6,13 @@ const skillCategories = [
     label: 'Primary Skills',
     icon: '⚛️',
     items: skills.primary,
-    color: '#6366f1',
+    color: '#9333ea',
   },
   {
     label: 'Secondary Skills',
     icon: '🔧',
     items: skills.secondary,
-    color: '#8b5cf6',
+    color: '#c084fc',
   },
   {
     label: 'Database',

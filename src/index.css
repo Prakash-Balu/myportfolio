@@ -1,26 +1,26 @@
-* {
+﻿* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 :root {
-  --primary: #0f172a;
-  --accent: #6366f1;
-  --accent-light: #818cf8;
-  --accent-dark: #4f46e5;
-  --secondary: #1e293b;
-  --surface: #0f172a;
-  --card: #1e293b;
-  --card-hover: #263548;
-  --text: #e2e8f0;
-  --text-muted: #94a3b8;
-  --text-dim: #64748b;
-  --border: #334155;
-  --gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
-  --gradient-subtle: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.15));
-  --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-  --shadow-accent: 0 4px 24px rgba(99, 102, 241, 0.3);
+  --primary: #09090b;
+  --accent: #9333ea;
+  --accent-light: #c084fc;
+  --accent-dark: #7e22ce;
+  --secondary: #18181b;
+  --surface: #09090b;
+  --card: #18181b;
+  --card-hover: #27272a;
+  --text: #f4f4f5;
+  --text-muted: #a1a1aa;
+  --text-dim: #71717a;
+  --border: #3b0764;
+  --gradient: linear-gradient(135deg, #9333ea, #7e22ce);
+  --gradient-subtle: linear-gradient(135deg, rgba(147, 51, 234, 0.15), rgba(126, 34, 206, 0.15));
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
+  --shadow-accent: 0 4px 24px rgba(147, 51, 234, 0.35);
 }
 
 html {
@@ -67,8 +67,8 @@ section {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--accent-light);
-  background: rgba(99, 102, 241, 0.12);
-  border: 1px solid rgba(99, 102, 241, 0.25);
+  background: rgba(147, 51, 234, 0.12);
+  border: 1px solid rgba(147, 51, 234, 0.25);
   padding: 0.3rem 0.9rem;
   border-radius: 100px;
   margin-bottom: 1rem;
@@ -98,7 +98,7 @@ section {
 
 .card:hover {
   background: var(--card-hover);
-  border-color: rgba(99, 102, 241, 0.4);
+  border-color: rgba(147, 51, 234, 0.4);
   transform: translateY(-2px);
   box-shadow: var(--shadow-accent);
 }
@@ -126,7 +126,7 @@ section {
 .btn-primary:hover {
   opacity: 0.9;
   transform: translateY(-1px);
-  box-shadow: 0 6px 28px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 6px 28px rgba(147, 51, 234, 0.4);
   color: #fff;
 }
 
@@ -139,7 +139,7 @@ section {
 .btn-outline:hover {
   border-color: var(--accent-light);
   color: var(--accent-light);
-  background: rgba(99, 102, 241, 0.08);
+  background: rgba(147, 51, 234, 0.08);
   transform: translateY(-1px);
 }
 
@@ -148,8 +148,8 @@ section {
   font-size: 0.75rem;
   font-weight: 500;
   padding: 0.25rem 0.65rem;
-  background: rgba(99, 102, 241, 0.12);
-  border: 1px solid rgba(99, 102, 241, 0.25);
+  background: rgba(147, 51, 234, 0.12);
+  border: 1px solid rgba(147, 51, 234, 0.25);
   color: var(--accent-light);
   border-radius: 100px;
 }

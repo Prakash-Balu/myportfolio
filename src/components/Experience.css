@@ -1,4 +1,4 @@
-.exp__layout {
+﻿.exp__layout {
   display: grid;
   grid-template-columns: 280px 1fr;
   gap: 1.5rem;
@@ -26,11 +26,11 @@
 
 .exp__tab:hover {
   background: var(--card-hover);
-  border-color: rgba(99, 102, 241, 0.3);
+  border-color: rgba(147, 51, 234, 0.3);
 }
 
 .exp__tab--active {
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(147, 51, 234, 0.1);
   border-color: var(--accent);
   box-shadow: 0 0 0 1px var(--accent);
 }
@@ -98,8 +98,8 @@
   font-size: 0.8rem;
   font-weight: 500;
   padding: 0.25rem 0.75rem;
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.25);
+  background: rgba(147, 51, 234, 0.1);
+  border: 1px solid rgba(147, 51, 234, 0.25);
   color: var(--text-muted);
   border-radius: 100px;
 }
