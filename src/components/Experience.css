@@ -176,20 +176,90 @@
   gap: 0.5rem;
 }
 
+/* Carousel nav — hidden on desktop */
+.exp__carousel-nav {
+  display: none;
+}
+
+/* Slide-in animation triggered by key change on detail panel */
+@keyframes expSlideIn {
+  from { opacity: 0; transform: translateX(18px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
 @media (max-width: 900px) {
   .exp__layout {
     grid-template-columns: 1fr;
   }
 
+  /* Hide tab list on mobile — replaced by carousel nav */
   .exp__tabs {
-    flex-direction: row;
-    overflow-x: auto;
-    padding-bottom: 0.25rem;
+    display: none;
   }
 
-  .exp__tab {
-    min-width: 200px;
+  /* Show carousel nav on mobile */
+  .exp__carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
   }
 
-  .exp__detail { padding: 1.5rem; }
+  .exp__carousel-btn {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.6rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 1.6rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .exp__carousel-btn:hover {
+    background: var(--card-hover);
+    border-color: var(--accent-light);
+    color: var(--accent-light);
+  }
+
+  .exp__carousel-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    min-width: 0;
+  }
+
+  .exp__carousel-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.35;
+    width: 100%;
+  }
+
+  .exp__carousel-count {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    font-weight: 500;
+  }
+
+  /* Animate detail panel on carousel change */
+  .exp__detail {
+    padding: 1.5rem;
+    animation: expSlideIn 0.25s ease both;
+  }
 }

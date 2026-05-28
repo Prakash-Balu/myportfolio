@@ -1,7 +1,15 @@
+import { useState } from 'react';
 import { projects } from '../data/portfolioData';
 import './Projects.css';
 
 export default function Projects() {
+  const [activeIdx, setActiveIdx] = useState(0);
+  const active = projects[activeIdx];
+  const total = projects.length;
+
+  const prev = () => setActiveIdx(i => (i - 1 + total) % total);
+  const next = () => setActiveIdx(i => (i + 1) % total);
+
   return (
     <section id="projects" className="projects">
       <div className="container">
@@ -11,33 +19,58 @@ export default function Projects() {
           <p className="section-subtitle">A selection of enterprise and client projects I've worked on</p>
         </div>
 
-        <div className="projects__grid">
-          {projects.map((project, i) => (
-            <div key={project.name} className={`projects__card card ${project.highlight ? 'projects__card--highlight' : ''}`}>
-              {project.highlight && (
-                <div className="projects__featured-badge">Featured</div>
-              )}
-              <div className="projects__card-top">
-                <div className="projects__icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <rect x="2" y="3" width="20" height="14" rx="2"/>
-                    <line x1="8" y1="21" x2="16" y2="21"/>
-                    <line x1="12" y1="17" x2="12" y2="21"/>
-                  </svg>
-                </div>
-                <span className="projects__type">{project.type}</span>
+        <div className="proj__layout">
+          {/* Desktop: tab list */}
+          <div className="proj__tabs">
+            {projects.map((project, i) => (
+              <button
+                key={i}
+                className={`proj__tab ${activeIdx === i ? 'proj__tab--active' : ''}`}
+                onClick={() => setActiveIdx(i)}
+              >
+                <span className="proj__tab-name">{project.name}</span>
+                <span className="proj__tab-type">{project.type}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Mobile: carousel navigation */}
+          <div className="proj__carousel-nav">
+            <button className="proj__carousel-btn" onClick={prev} aria-label="Previous">
+              &#8249;
+            </button>
+            <div className="proj__carousel-info">
+              <span className="proj__carousel-name">{active.name}</span>
+              <span className="proj__carousel-count">{activeIdx + 1} of {total}</span>
+            </div>
+            <button className="proj__carousel-btn" onClick={next} aria-label="Next">
+              &#8250;
+            </button>
+          </div>
+
+          {/* Detail panel */}
+          <div className="proj__detail card" key={activeIdx}>
+            <div className="proj__detail-header">
+              <div className="proj__title-row">
+                <h3 className="proj__name">{active.name}</h3>
+                {active.highlight && (
+                  <span className="proj__featured-badge">Featured</span>
+                )}
               </div>
+              <span className="proj__type-badge">{active.type}</span>
+            </div>
 
-              <h3 className="projects__name">{project.name}</h3>
-              <p className="projects__desc">{project.description}</p>
+            <p className="proj__description">{active.description}</p>
 
-              <div className="projects__tech">
-                {project.tech.map((t) => (
+            <div>
+              <h4 className="proj__tech-title">Tech Stack</h4>
+              <div className="proj__tech">
+                {active.tech.map((t) => (
                   <span key={t} className="tech-badge">{t}</span>
                 ))}
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

@@ -1,10 +1,14 @@
 import { useState } from 'react';
-import { experience } from '../data/portfolioData';
+import { experience, statsInfo } from '../data/portfolioData';
 import './Experience.css';
 
 export default function Experience() {
   const [activeIdx, setActiveIdx] = useState(0);
   const active = experience[activeIdx];
+  const total = experience.length;
+
+  const prev = () => setActiveIdx(i => (i - 1 + total) % total);
+  const next = () => setActiveIdx(i => (i + 1) % total);
 
   return (
     <section id="experience" className="experience">
@@ -12,10 +16,11 @@ export default function Experience() {
         <div className="section-header">
           <span className="section-tag">Work History</span>
           <h2 className="section-title">Professional Experience</h2>
-          <p className="section-subtitle">12+ years of enterprise web development across leading technology firms</p>
+          <p className="section-subtitle">{statsInfo.yearsofExp} years of enterprise web development across leading technology firms</p>
         </div>
 
         <div className="exp__layout">
+          {/* Desktop: tab list */}
           <div className="exp__tabs">
             {experience.map((exp, i) => (
               <button
@@ -29,7 +34,22 @@ export default function Experience() {
             ))}
           </div>
 
-          <div className="exp__detail card">
+          {/* Mobile: carousel navigation */}
+          <div className="exp__carousel-nav">
+            <button className="exp__carousel-btn" onClick={prev} aria-label="Previous">
+              &#8249;
+            </button>
+            <div className="exp__carousel-info">
+              <span className="exp__carousel-name">{active.company}</span>
+              <span className="exp__carousel-count">{activeIdx + 1} of {total}</span>
+            </div>
+            <button className="exp__carousel-btn" onClick={next} aria-label="Next">
+              &#8250;
+            </button>
+          </div>
+
+          {/* Detail panel */}
+          <div className="exp__detail card" key={activeIdx}>
             <div className="exp__detail-header">
               <div>
                 <h3 className="exp__role">{active.role}</h3>
