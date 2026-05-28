@@ -239,22 +239,48 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 6rem 1.25rem 4rem;
-    align-items: flex-start;
+    padding: 5rem 1.25rem 3rem;
+    overflow-x: hidden;
   }
   .hero__stats { gap: 1rem; }
   .hero__stat-number { font-size: 1.6rem; }
   .hero__scroll { display: none; }
+
+  .hero__content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .hero__name,
+  .hero__title,
+  .hero__subtitle,
   .hero__summary {
     max-width: 100%;
     width: 100%;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    text-align: left;
-    margin: 1.5rem 0 0 0;
-    padding: 0;
-    word-break: normal;
     overflow-wrap: break-word;
+    word-break:break-all;
   }
-  .hero__name-accent { max-width: 660px;}
+
+  .hero__name {
+    font-size: 3.2rem;
+    line-height: 1.05;
+  }
+
+  .hero__summary {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-top: 2rem;
+  }
+
+  /* .hero__name-accent { max-width: 660px;} */
 }
+
+@media (max-width: 480px) {
+  .hero__name {
+    font-size: 2.7rem;
+  }
+}
+
